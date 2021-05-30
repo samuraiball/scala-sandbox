@@ -1,6 +1,6 @@
 class Calc {
   def plus(a: Int, b: Int): Int = {
-    if (a < 0 || b < 0) throw new IllegalArgumentException()
+    require(a > 0 && b > 0)
     a + b
   }
 }
