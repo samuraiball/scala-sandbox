@@ -6,20 +6,20 @@ ThisBuild / organization := "com.example"
 ThisBuild / organizationName := "example"
 
 
-val http4sVersion = "0.21.22"
+val http4sVersion = "0.21.23"
 
-lazy val root = (project in file("."))
-  .settings(
-    name := "http4s",
-    libraryDependencies += scalaTest % Test,
-    libraryDependencies += "org.http4s" %% "http4s-dsl" % http4sVersion,
-    libraryDependencies += "org.http4s" %% "http4s-blaze-server" % http4sVersion,
-    libraryDependencies += "org.http4s" %% "http4s-blaze-client" % http4sVersion,
-    libraryDependencies += "org.http4s" %% "http4s-circe" % http4sVersion,
-    libraryDependencies += "io.circe" %% "circe-generic" % "0.13.0",
-    libraryDependencies += "io.circe" %% "circe-literal" % "0.13.0"
+lazy val root = (project in file(".")).settings(
+  name := "http4s",
+  libraryDependencies += scalaTest % Test,
+  libraryDependencies += "org.http4s" %% "http4s-dsl" % http4sVersion,
+  libraryDependencies += "org.http4s" %% "http4s-blaze-server" % http4sVersion,
+  libraryDependencies += "org.http4s" %% "http4s-blaze-client" % http4sVersion,
+  libraryDependencies += "org.http4s" %% "http4s-circe" % http4sVersion,
+  libraryDependencies += "io.circe" %% "circe-generic" % "0.13.0",
+  //  // Optional for string interpolation to JSON model
+  //  "io.circe" %% "circe-literal" % "0.13.0"
 
-  )
+)
 
 // Uncomment the following for publishing to Sonatype.
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for more detail.
